@@ -55,7 +55,7 @@ class Parsing5:
                 yield product  # yield возвращает продукт, но не останавливает цикл
 
     def _save(self, data: dict, file_path: Path):  # параметры полученных данных в формате json и место хранения
-        file_path.write_text(json.dumps(data, ensure_ascii=False))
+        file_path.write_text(json.dumps(data, ensure_ascii=False), 'utf8')
 
 
 def get_dir_path(dir_name: str) -> Path:  # принимает имя директории и возвращает путь к директории
